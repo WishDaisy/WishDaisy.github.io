@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ดีกันนะ 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, #ffe6f0, #ffd6eb);
+      overflow-x: hidden;
+      color: #333;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 40px 20px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      max-width: 650px;
+      width: 100%;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    h1, h2 {
+      margin: 0 0 15px;
+      color: #d63384;
+      font-size: clamp(22px, 5vw, 32px);
+    }
+
+    p {
+      font-size: clamp(16px, 4vw, 18px);
+      line-height: 1.6;
+    }
+
+    /* Floating small memories */
+    .floating {
+      position: fixed;
+      width: 80px;
+      height: 80px;
+      border-radius: 15px;
+      object-fit: cover;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      animation: float 10s infinite ease-in-out;
+      z-index: 10; /* อยู่ด้านหน้า */
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-40px) rotate(10deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+
+    .floating:nth-child(1) { top: 10%; left: 5%; animation-duration: 12s; }
+    .floating:nth-child(2) { top: 20%; right: 10%; animation-duration: 15s; }
+    .floating:nth-child(3) { top: 35%; left: 15%; animation-duration: 18s; }
+    .floating:nth-child(4) { top: 50%; right: 20%; animation-duration: 20s; }
+
+    /* Final button */
+    .final {
+      display: inline-block;
+      font-size: clamp(20px, 5vw, 28px);
+      color: #fff;
+      background: linear-gradient(90deg, #ff4da6, #ff80bf);
+      padding: 15px 40px;
+      border-radius: 50px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .final:hover {
+      transform: scale(1.05);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .floating {
+        width: 50px;
+        height: 50px;
+      }
+      .card {
+        margin: 20px;
+        padding: 15px;
+      }
+      h1, h2 {
+        font-size: clamp(20px, 6vw, 28px);
+      }
+      p {
+        font-size: clamp(14px, 4vw, 16px);
+      }
+      .final {
+        padding: 12px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating memory images -->
+  <img src="memory1.jpg" class="floating" alt="memory1">
+  <img src="memory2.jpg" class="floating" alt="memory2">
+  <img src="memory3.jpg" class="floating" alt="memory3">
+  <img src="memory4.jpg" class="floating" alt="memory4">
+
+  <!-- 20 Memory Sections -->
+  <section>
+    <div class="card">
+      <h1>ชั้นมีเรื่องอยากบอกเทอ 💕</h1>
+      <p>ช่วงนี้ชั้นนั้นทำผิดกับเทอเยอะมากๆเลย</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <h2>ชั้นขอโทษที่ทำให้เสียน้ำตาจริงๆนะะ</h2>
+      <p>วันนี้เทอรู้สึกแย่มามากพอแล้วชั้นเลยอยากมีอะไรมาให้เทอได้ดูนะะ</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <img src="big3.jpg" alt="ความทรงจำ3">
+      <h2>ดูสิเทอ</h2>
+      <p>วันเกิดเทอปีแรกที่มีชั้นนน่ารักมากเลยเนอะะ</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <img src="big4.jpg" alt="ความทรงจำ4">
+      <h2>จำได้มั้ยย</h2>
+      <p>ตอนชั้นท้องงลูกของเราา</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <img src="big5.jpg" alt="ความทรงจำ5">
+      <h2>เล่นกีตาร์ด้วว</h2>
+      <p>ตอนนั้นชั้นคิดกะให้ลูกหลานดูเลยว่าแม่ไม่สิต้องพ่อเค้าหล่ออขนาดไหนน</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <img src="big6.jpg" alt="ความทรงจำ6">
+      <h2>เอาบัตรมาคืนแฟนค่าา</h2>
+      <p>แฟนชั้นไม่ว่าจะมองยังไงแบบไหนก็น่ารักจริงๆนะะ</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <img src="big7.jpg" alt="ความทรงจำ7">
+      <h2>หน้าขาวเชียวว</h2>
+      <p>โดนแป้งเหมือนกันทำไมชั้นน่าเกลียดคนเดียวว🥹</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <img src="big8.jpg" alt="ความทรงจำ8">
+      <h2>เราไปเที่ยวด้วยกันน</h2>
+      <p>เทอสวยมากเลยรู้มั้ยเจอตอนแรกชั้นเขินเทอมากก</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <img src="big9.jpg" alt="ความทรงจำ9">
+      <h2>อุ้ยยแอบจับมือ</h2>
+      <p>มีเด็กรูปกดถ่ายยด้วยยนาา</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <img src="big10.jpg" alt="ความทรงจำ10">
+      <h2>ตู้ถ่ายรูปด้วยกันครั้งแรกก</h2>
+      <p>ตอนนี้ชั้นยังแปะไว้หน้าจอคอมชั้นอยู่เลยนะะ</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <img src="big11.jpg" alt="ความทรงจำ11">
+      <h2>ช่วงที่เรามักไปนั่งคุยกันน</h2>
+      <p>มันดีมากจริงงๆตอนนั้นขอบคุณที่พาชั้นไปนะะ</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <img src="big12.jpg" alt="ความทรงจำ12">
+      <h2>แฟนสาวติดเกมกับแฟนหนุ่มเกาะเบาะ</h2>
+      <p>ได้ทำอะไรแบบนี้ร่วมกับเทอรู้มั้ยชั้นมีความสุขมากที่สุดจริงๆนะะ</p>
+    </div>
+  </section>
+  
+  <section>
+    <div class="card">
+      <img src="big13.jpg" alt="ความทรงจำ13">
+      <h2>คิตตี้ทั้งสองง</h2>
+      <p>ดูรอยยิ้มมนั้นนของแฟนนชั้นสิน่ารักมากเลยยย</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <img src="big14.jpg" alt="ความทรงจำ14">
+      <h2>จิ้มมม</h2>
+      <p>ชั้นโดนจิ้มมลักกยิ้มมม</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <img src="big15.jpg" alt="ความทรงจำ15">
+      <h2>ตาใครรสวยยจัง</h2>
+      <p>ตาสวยยขนาดนี้ยายยไม่ว่าหรอคะะ</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <img src="big16.jpg" alt="ความทรงจำ16">
+      <h2>กินไก่กับแฟนน</h2>
+      <p>อร่อยยยยมากกกกกกที่สุดดเราต้องไปกันอีกนะะะ</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <img src="big17.jpg" alt="ความทรงจำ17">
+      <h2>อันนี้สมัยยแรกๆเลยนี่นา</h2>
+      <p>สมัยเขินนๆเลยยอันนเน้</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <img src="big18.jpg" alt="ความทรงจำ18">
+      <h2>ชั้นเปียกก</h2>
+      <p>รูปนี้น่ารักกมากกกกกเทออสวยยมากกมากกกเสียอย่างเดียชั้นเปียกกก</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <img src="big19.jpg" alt="ความทรงจำ19">
+      <h2>ดูลักยิ้มนั่นสิ</h2>
+      <p>เป็นรอยยิ้มและยิ้มที่สวยยยและน่ารักที่สุดที่ชั้นเคยเห็นตั้งแต่เกิดมาเลยยย</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <img src="big20.jpg" alt="ความทรงจำ20">
+      <h2>สุดท้ายแล้ว</h2>
+      <p>ชั้นรู้ว่าที่ทำไปชดใช้สิ่งที่ทำกับเทอไม่ได้เลยแต่ชั้นรักเทอนะรักเทอมากจริงๆ</p>
+      <p>ปรับปรุงและเป็นแฟนที่ดีกว่านี้ให้เทอนะะ เป็นแฟนที่เทออต้องการให้เทอมีความสุขข</p>
+      <p>แต่เป็นแฟนและเป็นคำสำคัญของชั้นนะะ สำคัญมากที่สุดดเลยยยห</p>
+    </div>
+  </section>
+
+  <!-- Final Button -->
+  <section>
+    <a class="final" href="https://youtube.com/shorts/Uv_SyrBHrAU" target="_blank">
+      ดีกันนะะ 💖
+    </a>
+  </section>
+
+  <!-- Music -->
+  <audio id="bgmusic" loop>
+    <source src="Yung Kai - Blue.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    // Scroll fade-up effect
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+
+    // Music autoplay after first interaction, volume เบา
+    const music = document.getElementById("bgmusic");
+    function startMusic() {
+      music.muted = false;
+      music.volume = 0.2; // เบาเสียงเหลือ 20%
+      music.play();
+      document.removeEventListener("click", startMusic);
+      document.removeEventListener("touchstart", startMusic);
+    }
+    document.addEventListener("click", startMusic);
+    document.addEventListener("touchstart", startMusic);
+  </script>
+
+</body>
+</html>
